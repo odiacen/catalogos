@@ -18,9 +18,8 @@ export default function Home(productos: any) {
   })
 
   return (
-    
-    <div>
-      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+    <>
+    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
         <Carousel>  
         {prod.map((producto: any, index: any) => (   
           <div key={index}>
@@ -65,23 +64,19 @@ export default function Home(productos: any) {
           </div>
      
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+            <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+                <Link href="/" className="flex items-center">
+                    <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Fantasy Tienda de Regalos</span>
+                    <Image src="/fantasy-logo.jpg" alt="Fantasy Logo" width={72} height={50} />
+                </Link>
+            </div>
       </footer>
-    </div>
+    </>
   )
 }
 
 export const getStaticProps = async () =>  {
-  const res = await fetch('https://mercadeocubano.com/wp-json/wc/v3/products?per_page=39&orderby=popularity&consumer_key=ck_42999e7fed435f74ce7e09872c8ee0fd643137ea&consumer_secret=cs_979a8d2977025ed95f62de200c6293f3818f863c')
+  const res = await fetch('https://mercadeocubano.com/wp-json/wc/v3/products?per_page=50&orderby=popularity&consumer_key=ck_42999e7fed435f74ce7e09872c8ee0fd643137ea&consumer_secret=cs_979a8d2977025ed95f62de200c6293f3818f863c')
   let productos = await res.json()
   
   

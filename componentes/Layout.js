@@ -1,5 +1,7 @@
 import Head from "next/head";
-import { Navbar } from "flowbite-react";
+import Link from "next/link";
+import Image from "next/image";
+
 
 const Layout = ({children}) => {
     return ( 
@@ -9,33 +11,22 @@ const Layout = ({children}) => {
                 <meta name="description" content="Catálogo para tienda de regalos Fantasy" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Navbar  fluid={true} rounded={true} >
-            <Navbar.Brand href="https://flowbite.com/">
-                <img
-                    src="https://flowbite.com/docs/images/logo.svg"
-                    className="mr-3 h-6 sm:h-9"
-                    alt="Flowbite Logo"
-                />
-                <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-                Catálogo Fantasy
-                </span>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-            <Navbar.Collapse>
-                <Navbar.Link href="/" active={true} >
-                    Home
-                </Navbar.Link>
-                <Navbar.Link href="/productos">
-                    Productos
-                </Navbar.Link>
-                <Navbar.Link href="/contacto">
-                    Contacto
-                </Navbar.Link>
-                <Navbar.Link href="/navbars">
-                    Información
-                </Navbar.Link>                
-            </Navbar.Collapse>
-        </Navbar>
+        
+        <nav className="bg-white border-gray-200 dark:bg-gray-900">
+            <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+                <Link href="/" className="flex items-center">
+                    <Image src="/fantasy-logo.jpg" alt="Fantasy Logo" width={72} height={50} />
+                    <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Catálogo Fantasy</span>
+                </Link>
+                <div className="flex items-center">
+                    <Link href="https://api.whatsapp.com/send?5353087159">
+                        <span className="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">Contactar</span>
+                    </Link>  
+                </div>
+            </div>
+        </nav>
+        
+
         {children}
     </>
     )
