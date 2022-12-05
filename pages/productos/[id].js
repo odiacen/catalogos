@@ -20,21 +20,24 @@ const variation = (product) => {
        
     return (
       <div>
-      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-        <Carousel>  
-        {prod.map((producto) => (   
-          <div key={producto.id}>
-          <div  className="flex h-full items-center justify-center bg-gray-1200 dark:bg-gray-700 dark:text-white"> 
-            <Image src={producto.image.src} alt={''} width={800} height={800} priority={true}/>
+        {prod.map((producto) => (
+<div key={prod.id} className="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <Image src={producto.image.src} alt={''} width={800} height={800} priority={true}/>
+    <div className="px-5 pb-5">
+        <a href="#">
+            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{producto.attributes[0].option}</h5>
+        </a>
+        <div className="flex items-center justify-between">
+            <span className="text-3xl font-bold text-gray-900 dark:text-white">{producto.stock_quantity} Disponibles</span>
             </div>
-            <div>
-            <p>{producto.id}</p>
+        <div className="flex items-center justify-between">
+            <span className="text-3xl font-bold text-gray-900 dark:text-white"> Precio: ${producto.price}</span>
             </div>
-          </div> 
-          ))}  
-        </Carousel>
-      </div>
-        
+    </div>
+</div>
+    ))}  
+
+              
     </div>
 
     )
@@ -67,7 +70,7 @@ export async function getStaticProps (context) {
     
          
       },
-      revalidate: 60
+      revalidate: 1
       
     }
     

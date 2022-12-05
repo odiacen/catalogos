@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import ListaDisp from '../componentes/ListaDisp'
-import ListaVar from '../componentes/ListaVar'
+import ShowChild from '../componentes/ShowChild'
+import { useState } from 'react'
 import { Carousel } from "flowbite-react";
 
 
@@ -12,8 +13,10 @@ export default function Home(productos: any) {
   products.forEach(function( item: any, index: any) {
     if ((item.price !== "") && (item.name !== 'Velas Volcánicas')) {
       prod.push(item)
+      
     }
-  })  
+  })
+
   return (
     
     <div>
@@ -55,7 +58,7 @@ export default function Home(productos: any) {
                             <p className="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" className="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
                         </div>
                     </div>
-                    
+                    <ShowChild id={producto.id}/>
                 </div>
                 
           ))} 
