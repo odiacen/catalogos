@@ -19,7 +19,7 @@ const Layout = ({children}) => {
                     <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Catálogo Fantasy</span>
                 </Link>
                 <div className="flex items-center">
-                    <Link href="https://api.whatsapp.com/send?5353087159">
+                    <Link href="https://api.whatsapp.com/send?phone=5358640192">
                         <span className="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">Contactar</span>
                     </Link>  
                 </div>
