@@ -20,17 +20,7 @@ export default function Home(productos: any) {
   return (
     <>   
      
-    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-        <Carousel>  
-        {prod.map((producto: any, index: any) => (   
-          
-            <div key={index} className="flex h-full items-center justify-center bg-gray-1200 dark:bg-gray-700 dark:text-white"> 
-              <Image src={producto.images[0].src} alt={''} width={1200} height={2100} />
-            </div>
-             
-          ))}  
-        </Carousel>
-    </div>
+    
 
     <div>
   
