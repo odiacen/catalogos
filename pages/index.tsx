@@ -18,30 +18,27 @@ export default function Home(productos: any) {
   })
 
   return (
-    <>
+    <>   
+     
     <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
         <Carousel>  
         {prod.map((producto: any, index: any) => (   
-          <div key={index}>
-          <div  className="flex h-full items-center justify-center bg-gray-1200 dark:bg-gray-700 dark:text-white"> 
-            <Image src={producto.images[0].src} alt={''} width={1200} height={2100} />
-            
+          
+            <div key={index} className="flex h-full items-center justify-center bg-gray-1200 dark:bg-gray-700 dark:text-white"> 
+              <Image src={producto.images[0].src} alt={''} width={1200} height={2100} />
             </div>
-            <div>
-            <p>{producto.name}</p>
-            </div>
-          </div> 
+             
           ))}  
         </Carousel>
     </div>
 
-    <div id="accordion-open" data-accordion="open">
+    <div>
   
             {prod.map((producto: any) => (
                 
                 <div key={producto.id}>
                     <Link href="/productos/[id]" as={`/productos/${producto.id}`}>          
-                    <h2 id="accordion-open-heading-2">
+                    <h2>
                         <button type="button" className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-2" aria-expanded="false" aria-controls="accordion-open-body-2">
                             <Image src={producto.images[0].src} alt={''} width={60} height={60} />
                             <span className="flex items-center">{producto.name}</span>
