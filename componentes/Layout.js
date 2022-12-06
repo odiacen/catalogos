@@ -9,13 +9,13 @@ const Layout = ({children}) => {
         <Head>
             <title>Catálogo Fantasy</title>
                 <meta name="description" content="Catálogo para tienda de regalos Fantasy" />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/fantasy-logo.jpg" />
         </Head>
         
-        <nav className="bg-white border-gray-200 dark:bg-gray-900">
+        <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
                 <Link href="/" className="flex items-center">
-                    <Image src="/fantasy-logo.jpg" alt="Fantasy Logo" width={72} height={50} />
+                    <Image src="/fantasy-logo.jpg" alt="Fantasy Logo" width={72} height={50} loading="lazy"/>
                     <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Catálogo Fantasy</span>
                 </Link>
                 <div className="flex items-center">
@@ -26,8 +26,9 @@ const Layout = ({children}) => {
             </div>
         </nav>
         
-
+        <div className="pt-30">
         {children}
+        </div>
     </>
     )
           
