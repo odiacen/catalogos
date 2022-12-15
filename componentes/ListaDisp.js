@@ -18,7 +18,7 @@ const ListaDisp = ({prod}) => {
                                 </button>
                             </h2>
                         </Link>
-                        <div id="accordion-open-body-2" className="hidden" aria-labelledby="accordion-open-heading-2">
+                        <div id="accordion-open-body-{producto.id}" className="hidden" aria-labelledby="accordion-open-heading-2">
                             <div className="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
                                 <p className="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
                                 <p className="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" className="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
