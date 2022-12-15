@@ -11,7 +11,7 @@ const Header = () => {
                     <link rel="icon" href="/fantasy-logo.jpg" />
                 </Head>
         
-                <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 fixed w-full">
+                <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 w-full">
                     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
                         <Link href="/" className="flex items-center">
                             <Image src="/fantasy-logo.jpg" alt="Fantasy Logo" width={72} height={50} loading="lazy"/>
