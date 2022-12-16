@@ -5,7 +5,7 @@ export default function Home(productos: any) {
   let prod: any = []
   const products: any = productos['productos']  
   products.forEach(function( item: any, index: any) {
-    if ((item.price !== "") && (item.name !== 'Globos de corazón 12"')) {
+    if (item.price !== "") {
       prod.push(item)
       
     }
